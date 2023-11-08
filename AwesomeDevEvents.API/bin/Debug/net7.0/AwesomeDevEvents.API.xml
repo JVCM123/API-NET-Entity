@@ -11,7 +11,7 @@
             <returns>Coleção de Eventos</returns>
             <response code="200">Sucesso</response>
         </member>
-        <member name="M:AwesomeDevEvents.API.Controllers.DevEventsController.GetById(System.Guid)">
+        <member name="M:AwesomeDevEvents.API.Controllers.DevEventsController.GetById(System.Int32)">
             <summary>
             Obter um evento com base no ID
             </summary>
@@ -31,7 +31,7 @@
             <returns>Rota do objeto recém criado</returns>
             <response code="201">Sucesso</response>
         </member>
-        <member name="M:AwesomeDevEvents.API.Controllers.DevEventsController.Update(System.Guid,AwesomeDevEvents.API.Entities.DevEvent)">
+        <member name="M:AwesomeDevEvents.API.Controllers.DevEventsController.Update(System.Int32,AwesomeDevEvents.API.Entities.DevEvent)">
             <summary>
             Atualizar um evento
             </summary>
@@ -44,7 +44,7 @@
             <response code="404">Evento não encontrado</response>
             <response code="204">Sucesso</response>
         </member>
-        <member name="M:AwesomeDevEvents.API.Controllers.DevEventsController.Delete(System.Guid)">
+        <member name="M:AwesomeDevEvents.API.Controllers.DevEventsController.Delete(System.Int32)">
             <summary>
             Excluir um evento
             </summary>
@@ -53,12 +53,12 @@
             <response code="404">Evento não encontrado</response>
             <response code="204">Sucesso</response>
         </member>
-        <member name="M:AwesomeDevEvents.API.Controllers.DevEventsController.PostSpeaker(System.Guid,AwesomeDevEvents.API.Entities.DevEventSpeaker)">
+        <member name="M:AwesomeDevEvents.API.Controllers.DevEventsController.PostSpeaker(System.Int32,AwesomeDevEvents.API.Entities.DevEventSpeaker)">
             <summary>
             Cadastrar palestrante
             </summary>
             <remarks>
-            Exemplo de dados do palestrante: {"id": "3fa85f64-5717-4562-b3fc-2c963f66afa6","name": "string","talkTitle": "string","talkDescription": "string","linkedInProfile": "string","devEventId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"}        /// </remarks>
+            Exemplo de dados do palestrante: {"id": "3fa85f64-5717-4562-b3fc-2c963f66afa6","name": "string","talkTitle": "string","talkDescription": "string","linkedInProfile": "string","devEventId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"}</remarks>
             <param name="id">Identificador único do evento</param>
             <param name="speaker">Dados do palestrante a ser adicionado</param>
             <returns>null</returns>

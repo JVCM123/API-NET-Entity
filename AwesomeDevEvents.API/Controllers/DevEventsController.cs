@@ -40,7 +40,7 @@ namespace AwesomeDevEvents.API.Controllers
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult GetById(Guid id)
+        public IActionResult GetById(int id)
         {
             var devEvents = _dbContext.DevEvents
                 .Include(de => de.Speakers)
@@ -86,7 +86,7 @@ namespace AwesomeDevEvents.API.Controllers
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult Update(Guid id, DevEvent input)
+        public IActionResult Update(int id, DevEvent input)
         {
             var devEvents = _dbContext.DevEvents.SingleOrDefault(e => e.Id == id);
             if (devEvents == null)
@@ -111,7 +111,7 @@ namespace AwesomeDevEvents.API.Controllers
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult Delete(Guid id)
+        public IActionResult Delete(int id)
         {
             var devEvents = _dbContext.DevEvents.SingleOrDefault(e => e.Id == id);
             if (devEvents == null)
@@ -140,7 +140,7 @@ namespace AwesomeDevEvents.API.Controllers
         [HttpPost("{id}/speakers")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult PostSpeaker(Guid id, DevEventSpeaker speaker)
+        public IActionResult PostSpeaker(int id, DevEventSpeaker speaker)
         {
             speaker.DevEventId = id;
 
